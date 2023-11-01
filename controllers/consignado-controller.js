@@ -17,25 +17,22 @@ exports.consignado = (req, res) => {
     res.status(400).json(error)
   }
 
-  if(motivoExclusao == 30){
-    res.status(400).json(error2)
-  }
 
   // VALIDAÇÃO DE NÃO ENVIO DO CAMPO
   if(numeroBeneficio == null){
-    return res.status(400).json({"message": "O campo #numeroBeneficio é obrigatorio!!"});
+    return res.status(400).json({error2});
   }
 
   if(codigoSolicitante == null){
-    return res.status(400).json({"message": "O campo #codigoSolicitante é obrigatorio!!"});
+    return res.status(400).json({error2});
   }
 
   if(numeroContrato == null){
-    return res.status(400).json({"message": "O campo #numeroContrato é obrigatorio!!"});
+    return res.status(400).json({error2});
   }
 
   if(motivoExclusao == null){
-    return res.status(400).json({"message": "O campo #motivoExclusao é obrigatorio!!"});
+    return res.status(400).json({error2});
   }
   // VALIDAÇÃO DE TIPOS
   if(typeof codigoSolicitante !== 'number'){
