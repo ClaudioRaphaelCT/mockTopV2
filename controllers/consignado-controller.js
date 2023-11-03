@@ -17,6 +17,10 @@ exports.consignado = (req, res) => {
     res.status(412).json(error)
   }
 
+  if(numeroContrato == "1000000786"){
+    res.status(412).json(error)
+  }
+
 
   // VALIDAÇÃO DE NÃO ENVIO DO CAMPO
  /* if(numeroBeneficio == null){
@@ -35,8 +39,10 @@ exports.consignado = (req, res) => {
     return res.status(400).json(error2);
   }*/
 
-  if(motivoExclusao == 30){
-    return res.status(400).json(error2);}
+  if(motivoExclusao = 30)
+  {
+    return res.status(400).json(error2)
+  }
 
   // VALIDAÇÃO DE TIPOS
   if(typeof codigoSolicitante !== 'number'){
