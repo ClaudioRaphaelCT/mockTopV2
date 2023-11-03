@@ -19,7 +19,7 @@ exports.consignado = (req, res) => {
 
 
   // VALIDAÇÃO DE NÃO ENVIO DO CAMPO
-  if(numeroBeneficio == null){
+ /* if(numeroBeneficio == null){
     return res.status(400).json(error2);
   }
 
@@ -33,7 +33,11 @@ exports.consignado = (req, res) => {
 
   if(motivoExclusao == null){
     return res.status(400).json(error2);
-  }
+  }*/
+
+  if(motivoExclusao == 30){
+    return res.status(400).json(error2);}
+
   // VALIDAÇÃO DE TIPOS
   if(typeof codigoSolicitante !== 'number'){
     return res.status(400).json({"message": "codigoSolicitante não pode ser STRING"});
