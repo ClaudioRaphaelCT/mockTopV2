@@ -14,25 +14,25 @@ exports.consignado = (req, res) => {
     
 
   if(validate){
-    res.status(400).json(error)
+    res.status(412).json(error)
   }
 
 
   // VALIDAÇÃO DE NÃO ENVIO DO CAMPO
   if(numeroBeneficio == null){
-    return res.status(400).json({error2});
+    return res.status(400).json(error2);
   }
 
   if(codigoSolicitante == null){
-    return res.status(400).json({error2});
+    return res.status(400).json(error2);
   }
 
   if(numeroContrato == null){
-    return res.status(400).json({error2});
+    return res.status(400).json(error2);
   }
 
   if(motivoExclusao == null){
-    return res.status(400).json({error2});
+    return res.status(400).json(error2);
   }
   // VALIDAÇÃO DE TIPOS
   if(typeof codigoSolicitante !== 'number'){
