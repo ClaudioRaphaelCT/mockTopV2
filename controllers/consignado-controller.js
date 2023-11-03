@@ -1,6 +1,7 @@
 const dados = require('../database/consignado_bd')
 const error = require('../errors/error_consignado')
 const error2 = require('../errors/error_2')
+const error3 = require ('../errors/error_3')
 
 exports.consignado = (req, res) => {
     const {numeroBeneficio, codigoSolicitante, numeroContrato, motivoExclusao} = req.body
@@ -18,7 +19,7 @@ exports.consignado = (req, res) => {
   }
 
   if(numeroContrato == "1000000786"){
-    res.status(412).json(error)
+    res.status(412).json(error3)
   }
 
   // VALIDAÇÃO DE NÃO ENVIO DO CAMPO
